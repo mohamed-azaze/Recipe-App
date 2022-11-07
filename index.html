@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/framework.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Recipe-App</title>
+  </head>
+  <body>
+    <section class="mh-100v bg-eee flex-center">
+      <div
+        class="pupop-container pos-absolute bg-00005 w-full h-full zi-9999 flex-center"
+      >
+        <div class="button pos-absolute">
+          <span>Close</span>
+        </div>
+        <div class="meal-pupop bg-ddd">
+          <header class="pupop-header">
+            <h2 class="txt-center pt-10 pb-10">Meals</h2>
+          </header>
+          <div
+            class="meals-container d-grid gap-20 mt-15 mr-auto ml-auto"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="details-pupop-container pos-absolute bg-00005 w-full h-full zi-9999 flex-center"
+      >
+        <div class="details-pupop bg-ddd flex-center w-half pos-relative"></div>
+      </div>
+      <div class="app bg-00005 w-300">
+        <header class="mb-15 mt-15">
+          <h1 class="txt-center">Recipe App</h1>
+        </header>
+        <div class="search-meals d-flex justify-center mb-15 pos-relative">
+          <input
+            class="ol-none border-none border-r-5 pt-5 pr-10 pb-5 pl-10 place-none"
+            type="text"
+            placeholder="Enter the First Letter"
+          />
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <div class="fav-meals">
+          <div class="info">
+            <h2 class="mt-0 mb-10 txt-center">Favorite Meals</h2>
+          </div>
+          <div class="meals-container d-grid m-10"></div>
+        </div>
+        <div class="random-meal">
+          <!-- <div class="image over-hidden mr-auto ml-auto border-r-5">
+            <img
+              class="maxw-100"
+              src="https://www.themealdb.com/images/media/meals/jcr46d1614763831.jpg"
+              alt=""
+            />
+          </div>
+          <div class="info flex-between pr-15 pl-15 mt-10">
+            <span class="d-block fz-20 fw-700">suop</span>
+            <i class="fa-solid fa-heart cursor-pointer like-meal"></i>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
