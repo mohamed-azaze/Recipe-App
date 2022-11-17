@@ -90,63 +90,69 @@ function showDetails(indx) {
             if (i === indx) {
                 detailsPupopContainer.classList.add("show");
                 const detailsContainer = document.querySelector(".details-pupop");
-                detailsContainer.innerHTML = `  <div class="button pos-absolute" onclick=closepup()>
-                                        <span>Close</span>
-                                    </div>
-                                    <div class="info w-half align-self-start">
-                                        <header class="txt-center mt-20 mb-20">
-                                        <h2>Meal Recipe</h2>
-                                        </header>
-                                        <div class="meal-details pl-15 pr-15">
-                                        <h3 class="mt-15 mb-15 fw-600">
-                                            <span class="fw-bold">Meal: </span>
-                                            ${mealsData[indx].strMeal}
-                                        </h3>
-                                        <p class="line-h-1-half">
-                                            <span class="fz-20 fw-bold">Meal Details: </span>
-                                            ${mealsData[indx].strInstructions}
-                                        </p>
+
+                detailsContainer.innerHTML = `
+                                        <div class="button pos-absolute" onclick="closepup()">
+                                            <span>Close</span>
                                         </div>
-                                    </div>
-                                    <div class="image w-half pos-relative ">
-                                        <img
-                                        class="maxw-100"
-                                        src=${mealsData[indx].strMealThumb}
-                                        alt=""
-                                        />
-                                        <i class="fa-solid fa-heart cursor-pointer pos-absolute"  onclick='saveMeal(${mealsData[indx].idMeal})'></i>
-                                    </div>`;
+                                        <div class="container flex-center">
+                                            <div class="info w-half align-self-start">
+                                            <header class="txt-center mt-20 mb-20">
+                                                <h2>Meal Recipe</h2>
+                                            </header>
+                                            <div class="meal-details pl-15 pr-15">
+                                                <h3 class="mt-15 mb-15 fw-600">
+                                                <span class="fw-bold">Meal: </span>
+                                                ${mealsData[indx].strMeal}
+                                                </h3>
+                                                <p class="line-h-1-half">
+                                                <span class="fz-20 fw-bold">Meal Details: </span>
+                                                ${mealsData[indx].strInstructions}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="image w-half pos-relative">
+                                            <img class="maxw-100" src=${mealsData[indx].strMealThumb} alt="" />
+                                            <i
+                                                class="fa-solid fa-heart cursor-pointer pos-absolute"
+                                                onclick="saveMeal(${mealsData[indx].idMeal})"
+                                            ></i>
+                                            </div>
+                                        </div>`
             }
         }
     } else {
         detailsPupopContainer.classList.add("show");
         const detailsContainer = document.querySelector(".details-pupop");
-        detailsContainer.innerHTML = `  <div class="button pos-absolute" onclick=closepup()>
-                                <span>Close</span>
-                            </div>
-                            <div class="info w-half align-self-start">
-                                <header class="txt-center mt-20 mb-20">
-                                <h2>Meal Recipe</h2>
-                                </header>
-                                <div class="meal-details pl-15 pr-15">
-                                <h3 class="mt-15 mb-15 fw-600">
-                                    <span class="fw-bold">Meal: </span>
-                                    ${randomMealDetails[0].strMeal}
-                                </h3>
-                                <p class="line-h-1-half">
-                                    <span class="fz-20 fw-bold">Meal Details: </span>
-                                    ${randomMealDetails[0].strInstructions}
-                                </p>
-                                </div>
-                            </div>
-                            <div class="image w-half pos-relative ">
-                                <img
-                                class="maxw-100"
-                                src=${randomMealDetails[0].strMealThumb}
-                                alt=""
-                                />
-                                <i class="fa-solid fa-heart cursor-pointer pos-absolute"  onclick='saveMeal(${randomMealDetails[0].idMeal})'></i>
-                            </div>`;
+        detailsContainer.innerHTML = `
+                                        <div class="button pos-absolute" onclick="closepup()">
+                                            <span>Close</span>
+                                        </div>
+                                        <div class="container flex-center">
+                                            <div class="info w-half align-self-start">
+                                            <header class="txt-center mt-20 mb-20">
+                                                <h2>Meal Recipe</h2>
+                                            </header>
+                                            <div class="meal-details pl-15 pr-15">
+                                                <h3 class="mt-15 mb-15 fw-600">
+                                                <span class="fw-bold">Meal: </span>
+                                                ${randomMealDetails[0].strMeal}
+                                                </h3>
+                                                <p class="line-h-1-half">
+                                                <span class="fz-20 fw-bold">Meal Details: </span>
+                                                ${randomMealDetails[0].strInstructions}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="image w-half pos-relative">
+                                            <img class="maxw-100" src=${randomMealDetails[0].strMealThumb} alt="" />
+                                            <i
+                                                class="fa-solid fa-heart cursor-pointer pos-absolute"
+                                                onclick='saveMeal(${randomMealDetails[0].idMeal})'
+                                            ></i>
+                                            </div>
+                                        </div>
+        `
     }
 }
 function closepup() {
@@ -251,32 +257,33 @@ function favMealDetails(indx) {
         if (i == indx) {
             detailsPupopContainer.classList.add("show");
             const detailsContainer = document.querySelector(".details-pupop");
-            detailsContainer.innerHTML = `  <div class="button pos-absolute" onclick=closepup()>
-                                    <span>Close</span>
-                                </div>
-                                <div class="info w-half align-self-start">
-                                    <header class="txt-center mt-20 mb-20">
-                                    <h2>Meal Recipe</h2>
-                                    </header>
-                                    <div class="meal-details pl-15 pr-15">
-                                    <h3 class="mt-15 mb-15 fw-600">
-                                        <span class="fw-bold">Meal: </span>
-                                        ${storageData[indx].strMeal}
-                                    </h3>
-                                    <p class="line-h-1-half">
-                                        <span class="fz-20 fw-bold">Meal Details: </span>
-                                        ${storageData[indx].strInstructions}
-                                    </p>
-                                    </div>
-                                </div>
-                                <div class="image w-half pos-relative ">
-                                    <img
-                                    class="maxw-100"
-                                    src=${storageData[indx].strMealThumb}
-                                    alt=""
-                                    />
-                                    <i class="fa-solid fa-heart cursor-pointer pos-absolute" onclick='saveMeal(${storageData[indx].idMeal})'></i>
-                                </div>`;
+            detailsContainer.innerHTML = ` <div class="button pos-absolute" onclick="closepup()">
+                                            <span>Close</span>
+                                        </div>
+                                        <div class="container flex-center">
+                                            <div class="info w-half align-self-start">
+                                            <header class="txt-center mt-20 mb-20">
+                                                <h2>Meal Recipe</h2>
+                                            </header>
+                                            <div class="meal-details pl-15 pr-15">
+                                                <h3 class="mt-15 mb-15 fw-600">
+                                                <span class="fw-bold">Meal: </span>
+                                                ${storageData[indx].strMeal}
+                                                </h3>
+                                                <p class="line-h-1-half">
+                                                <span class="fz-20 fw-bold">Meal Details: </span>
+                                                ${storageData[indx].strInstructions}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="image w-half pos-relative">
+                                            <img class="maxw-100" src=${storageData[indx].strMealThumb} alt="" />
+                                            <i
+                                                class="fa-solid fa-heart cursor-pointer pos-absolute"
+                                                onclick='saveMeal(${storageData[indx].idMeal})'
+                                            ></i>
+                                            </div>
+                                        </div>`
         }
 
     }
